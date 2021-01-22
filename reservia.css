@@ -1,0 +1,121 @@
+* {
+    font-family: "Raleway", sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.nav nav a {
+    padding: 50px 2em;
+}
+
+.nav nav a:hover {
+    color:#0065fc;
+    border-top: 3px solid
+}
+
+.logo {
+    padding: 2em;
+}
+
+.nav nav :nth-child(3) {
+    color: #0065FC; 
+    font-weight: 600;
+}
+
+section {
+    padding: 0 2em;
+}
+
+
+.recherche {
+    border-radius: 15px;
+    border: 1px solid #F2F2F2;
+    width: 400px;
+    
+}
+
+.recherche input {
+    height: 50px;
+    width: 250px;
+    border: none;
+    padding: 15px;
+    font-weight: 600;
+    font-size: 16px;
+    
+}
+
+.recherche input::placeholder {
+    color: black;
+}
+
+.recherche input:focus {
+    outline: none; 
+}
+
+.recherche button {
+    height: 50px;
+    width: 150px;
+    position: absolute;
+    border-radius: 0 15px 15px 0;
+    border: none; 
+    background: #0065FC;
+    color: white; 
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.iconSearch {
+    text-align: center;
+    padding: 17px;
+    background-color: #F2F2F2;
+    border-radius: 15px 0 0 15px;
+}
+
+.filtre p {
+    display: inline;
+}
+
+.filtre {
+    margin: 20px 0px 20px 0px;
+}
+
+.tag {
+    margin: 0px 50px; 
+    border: 2px solid #f2f2f2;
+    border-radius: 50px;
+    margin-left: 0;
+    font-weight: bold;
+    padding: 0px 15px;
+    font-size: 14px;
+    background-color: white;
+}
+
+.filtre i {
+    background-color:#DEEBFF;
+    border-radius: 50px;
+    padding: 15px;
+    color: #0065FC;
+    position: relative;
+    left: -18px;
+}
