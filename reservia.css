@@ -18,6 +18,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-right: 2em;
 }
 
 
@@ -140,6 +141,7 @@ section p {
 
 .container {
     display: flex;
+    margin-bottom: 80px;
 }
 
 #logement {
@@ -165,22 +167,29 @@ section p {
 .card {
     background-color: white;
     border-radius: 15px;
-    width: 300px;
+    width: 290px;
     height: 250px;
     margin-bottom: 50px;
+    box-shadow: 0px 0px 4px rgb(0, 0, 0,.5);
 }
 
-.card p, .card h3, .card span {
+.card p, .card h3, .card div {
     margin: 2px 0;
     padding-left: 15px;
 }
 
-.card span {
+.card div {
     color: #0065FC; 
 }
 
 .noStar {
     color: #deebff;
+}
+
+#logement button {
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 /* Les plus populaires */
@@ -189,19 +198,115 @@ section p {
     width: 30%;
     background-color: #F2F2F2;
     padding: 2em;
-    margin-left: 2em;
+    margin: 0 2em;
     border-radius: 15px;
 }
 
+.cardsPop {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 .cardPop img {
-    width: 100%;
-    max-height: 120px;
+    max-width: 145px;
+    min-width: 145px;
+    height: 160px;
+    padding: 5px;
+    border-radius: 15px 0 0 15px;
 }
 
 .cardPop {
     display: flex;
+    background-color: white;
+    margin: 25px 0px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 4px rgb(0, 0, 0,.5);
 }
 
-.cardPop .cardBottom {
+.cardBottom h3, .cardBottom p, .cardBottom div{
+    margin: 2px 0;
+}
+
+.cardBottom {
+    display: flex;
     flex-direction: column;
+    padding: 10px;
+}
+
+.cardBottom div {
+    margin-top: 50px;
+    color: #0065FC;
+}
+
+.fa-chart-line {
+    margin-left: 105px;
+}
+
+/* Activités */
+
+#activites {
+    margin: 0 2em;
+}
+
+.cardsAct {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.cardAct {
+    border-radius: 15px;
+    box-shadow: 0px 0px 4px rgb(0, 0, 0,.5);
+    margin-bottom: 22px;
+}
+
+.cardAct img {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.cardAct h3 {
+    padding: 0 0 15px 15px;
+}
+
+.xlargeCard, .large-medium, .medium-large {
+    width: 23%;
+}
+
+.xlarge img {
+    height: 500px;
+}
+
+.large img {
+    height: 270px;
+}
+
+.medium img {
+    height: 150px;
+}
+
+
+/* Footer */
+
+footer {
+    display: flex; 
+    height: 250px;
+    padding: 2em;
+    background-color:  #F2F2F2;
+    margin-top: 50px;
+}
+
+footer li {
+    list-style-type: none;
+    margin: 15px 0;
+}
+
+.footerNav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.footerNav {
+    width: 40%;
 }
