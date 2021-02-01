@@ -68,7 +68,6 @@ section p {
     border-radius: 15px;
     border: 1px solid #F2F2F2;
     width: 400px;
-    
 }
 
 .recherche input {
@@ -99,7 +98,19 @@ section p {
     color: white; 
     font-weight: 600;
     font-size: 20px;
+    text-indent: -9999px;
+    line-height: 0;
 }
+
+.recherche button::after {
+    content: "Rechercher";
+    text-indent: 0;
+    display: block;
+    line-height: -50;
+    position: absolute;
+    bottom: 25px;
+    left: 20px
+  }
 
 .iconSearch {
     text-align: center;
@@ -154,6 +165,7 @@ section p {
 
 .cards img {
     max-height: 170px;
+    min-height: 170px;
     width: 100%;
     padding: 5px;
     border-radius: 15px 15px 0 0;
@@ -167,7 +179,7 @@ section p {
 .card {
     background-color: white;
     border-radius: 15px;
-    width: 290px;
+    width: 30%;
     height: 250px;
     margin-bottom: 50px;
     box-shadow: 0px 0px 4px rgb(0, 0, 0,.5);
@@ -239,9 +251,13 @@ section p {
     color: #0065FC;
 }
 
-.fa-chart-line {
-    margin-left: 105px;
+
+.titrePop h2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
+
 
 /* Activités */
 
@@ -309,4 +325,204 @@ footer li {
 
 .footerNav {
     width: 40%;
+}
+
+/* RESPONSIVE */ 
+
+@media screen and (max-width: 1360px) {
+    h3 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .cardBottom div {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 1220px){
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .populaire {
+        width: 95%;
+    }
+
+    #logement {
+        width: 95%;
+    }
+
+    .card {
+        width: 30%;
+    }
+
+    .cardsPop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .cardPop {
+        width: 30%;
+    }
+
+    #logement, .populaire {
+        margin: 2em;
+        padding: 2em;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1126px) {
+    
+    h3 {
+        font-size: 14px !important;
+    }
+
+    .cardPop {
+        width: 47%;
+    }
+
+    .cardsPop {
+        flex-wrap: wrap;
+    }
+
+    .cardsAct {
+        flex-wrap: wrap;
+    }
+
+    .xlargeCard, .large-medium, .medium-large {
+        width: 47%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .card {
+        width: 45%;
+    }
+
+    #logement, .populaire {
+        padding: 15px;
+        margin: 0;
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (max-width: 680px) {
+
+    #inscription {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        padding: 0;
+    }
+
+    header {
+        margin: 0;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        padding: 15px;
+    }
+
+    .filtre p {
+        display: block;
+        font-weight: 600;
+    }
+
+    section p {
+        margin: 25px 0;
+    }
+
+    .tag {
+        margin-bottom: 15px;
+    }
+
+    .nav nav a:not(#inscription) {
+        padding: 15px;
+        width: 50%;
+        text-align: center;
+    }
+
+    .nav {
+        width: 100%;
+        border-bottom: 4px solid #f2f2f2;
+    }
+
+    .cardPop {
+        width: 100%;
+    }
+
+    #logement, .populaire {
+        padding: 25px;
+        margin: 0;
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 590px) {
+
+    .card {
+        width: 100%;
+        margin: 25px;
+    }
+
+    .recherche {
+        max-width: 300px;
+        margin-right: 0;
+    }
+
+    .recherche button {
+        width: 50px;
+        border-radius: 15px;
+        text-indent: 0;
+        line-height: 0;
+    }
+
+    .recherche input {
+        width: 200px;
+    }
+
+    .recherche button::after {
+        display: none;
+    }
+
+    .cardsAct {
+        flex-direction: column;
+    }
+
+    .xlargeCard, .large-medium, .medium-large {
+        width: 100%;
+    }
+
+    .xlarge img {
+        height: 150px;
+    }
+
+    .large img {
+        height: 150px;
+    }
+
+    .medium img {
+        height: 150px;
+    }
 }
