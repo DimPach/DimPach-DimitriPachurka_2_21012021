@@ -169,6 +169,7 @@ section p {
     width: 100%;
     padding: 5px;
     border-radius: 15px 15px 0 0;
+    object-fit: cover;
 }
 .cards {
     display: flex; 
@@ -226,6 +227,7 @@ section p {
     height: 160px;
     padding: 5px;
     border-radius: 15px 0 0 15px;
+    object-fit: cover;
 }
 
 .cardPop {
@@ -280,6 +282,7 @@ section p {
 .cardAct img {
     width: 100%;
     border-radius: 15px 15px 0 0;
+    object-fit: cover;
 }
 
 .cardAct h3 {
