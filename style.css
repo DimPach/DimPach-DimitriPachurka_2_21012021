@@ -195,11 +195,18 @@ section p {
 .card p, .card h3, .card div {
     margin: 2px 0;
     padding-left: 15px;
+    overflow: hidden;
 }
 
 .card div {
     color: #0065FC; 
+    max-width: 100px;
 }
+
+.fa-star:before {
+    font-size: 10px;
+}
+
 
 .noStar {
     color: #deebff;
@@ -224,13 +231,12 @@ section p {
 .cardsPop {
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 
 .cardPop img {
     max-width: 145px;
     min-width: 145px;
-    height: 160px;
+    height: 100%;
     padding: 5px;
     border-radius: 15px 0 0 15px;
     object-fit: cover;
@@ -242,6 +248,7 @@ section p {
     margin: 25px 0px;
     border-radius: 15px;
     box-shadow: 0px 0px 4px rgb(0, 0, 0,.5);
+    max-height: 160px;
 }
 
 .cardBottom h3, .cardBottom p, .cardBottom div{
@@ -257,6 +264,7 @@ section p {
 .cardBottom div {
     margin-top: 50px;
     color: #0065FC;
+    justify-self: start;
 }
 
 
@@ -264,6 +272,10 @@ section p {
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+.cardBottom .notes {
+    margin-top: 40px;
 }
 
 
@@ -347,12 +359,39 @@ footer li {
         font-size: 14px;
     }
 
-    .cardBottom div {
-        margin-top: 30px;
+    .cardBottom .notes {
+        margin-top: 15px;
     }
 }
 
-@media screen and (max-width: 1220px){
+@media screen and (max-width: 1220px) {
+    .cardBottom div {
+        margin-top: 40px;
+    }
+
+    .cardPop img {
+        max-width: 130px;
+        min-width: 130px;
+    }
+}
+
+@media screen and (max-width: 1126px) {
+    
+    h3 {
+        font-size: 14px !important;
+    }
+
+    .cardPop img {
+        max-width: 110px;
+        min-width: 110px;
+    }
+
+    .cardBottom .notes {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 1024px){
     .container {
         flex-direction: column-reverse;
     }
@@ -391,15 +430,8 @@ footer li {
     p {
         font-size: 16px;
     }
-}
 
-@media screen and (max-width: 1126px) {
-    
-    h3 {
-        font-size: 14px !important;
-    }
-
-    .cardPop {
+    .xlargeCard, .large-medium, .medium-large {
         width: 47%;
     }
 
@@ -411,8 +443,8 @@ footer li {
         flex-wrap: wrap;
     }
 
-    .xlargeCard, .large-medium, .medium-large {
-        width: 47%;
+    .cardBottom .notes {
+        margin-top: 50px;
     }
 }
 
@@ -427,7 +459,18 @@ footer li {
         width: 100%;
     }
 
+    .cardsPop {
+        flex-direction: column;
+    }
 
+    .cardPop {
+        width: 100%;
+    }
+
+    .cardPop img {
+        max-width: 200px;
+        min-width: 200px;
+    }
 }
 
 @media screen and (max-width: 680px) {
@@ -467,8 +510,17 @@ footer li {
         text-align: center;
     }
 
+    .nav nav a:hover {
+        border-top: hidden;
+        color:#0065fc;
+        border-bottom: 3px solid #0065fc !important;
+    }
+
     .nav {
         width: 100%;
+    }
+
+    .nav nav a:not(#inscription) {
         border-bottom: 4px solid #f2f2f2;
     }
 
@@ -492,7 +544,6 @@ footer li {
 
     .card {
         width: 100%;
-        margin: 25px;
     }
 
     .recherche {
@@ -533,5 +584,17 @@ footer li {
 
     .medium img {
         height: 150px;
+    }
+
+    #logement {
+        background-color: white;
+    }
+
+    .populaire {
+        border-radius: initial;
+    }
+
+    .footerNav {
+        width: 100%;
     }
 }
