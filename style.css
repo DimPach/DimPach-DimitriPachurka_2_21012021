@@ -195,7 +195,12 @@ section p {
 .card p, .card h3, .card div {
     margin: 2px 0;
     padding-left: 15px;
+}
+
+.card h3 {
     overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .card div {
