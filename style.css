@@ -59,11 +59,16 @@ section p {
 .fa-info {
     border-radius: 100px;
     border: 2px solid #f2f2f2;
-    padding: 10px;
+    padding: 5px;
     color: #0065FC;
-    height: 30px;
     margin-right: 10px;
+    font-size: 12px;
 }
+
+.fa-info:before {
+    padding: 0 3px;
+}
+
 .recherche {
     border-radius: 15px;
     border: 1px solid #F2F2F2;
